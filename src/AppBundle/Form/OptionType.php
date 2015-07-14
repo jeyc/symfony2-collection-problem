@@ -16,10 +16,10 @@ class OptionType extends AbstractType
     {
         $builder
             ->add('enabled', 'checkbox', [
-                'required' => false
+                'required' => false,
             ])
             ->add('name', 'text', [
-                'disabled' => true
+                'disabled' => true,
             ])
         ;
     }
@@ -30,7 +30,7 @@ class OptionType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Option::class
+            'data_class' => 'AppBundle\Entity\Option'
         ]);
     }
 

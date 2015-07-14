@@ -18,7 +18,7 @@ class ConfigType extends AbstractType
             ->add('options', 'collection', [
                 'type' => new OptionType(),
                 'allow_add' => true,
-                'allow_delete' => true
+                'allow_delete' => true,
             ])
             ->add('submit', 'submit')
         ;
@@ -30,7 +30,7 @@ class ConfigType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Config::class
+            'data_class' => 'AppBundle\Entity\Config'
         ]);
     }
 
